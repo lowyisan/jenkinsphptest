@@ -18,6 +18,6 @@ class GumballMachineTest extends TestCase {
         $this->gumballMachineInstance->turnWheel();
         
         // Change the expected value to make the assert fail
-        $this->assertEquals(9999, $this->gumballMachineInstance->getGumballs());
+        $this->assertEquals(100, $this->gumballMachineInstance->getGumballs());
     }
 }
