@@ -17,6 +17,6 @@ class GumballMachineTest extends TestCase {
 		
 		$this->gumballMachineInstance->turnWheel();
 		
-		$this->assertEquals(99, $this->gumballMachineInstance->getGumballs());
+		$this->assertEquals(100, $this->gumballMachineInstance->getGumballs());
 	}
 }
