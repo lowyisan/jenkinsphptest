@@ -4,19 +4,20 @@ require 'GumballMachine.php';
 
 class GumballMachineTest extends TestCase {
 
-	public $gumballMachineInstance;
-	
-	public function setup():void {
-		
-		$this->gumballMachineInstance = new GumballMachine();
-	}
-	
-	public function testIfWheelWorks() {
-		
-		$this->gumballMachineInstance->setGumballs(100);
-		
-		$this->gumballMachineInstance->turnWheel();
-		
-		$this->assertEquals(10000, $this->gumballMachineInstance->getGumballs());
-	}
+    public $gumballMachineInstance;
+    
+    public function setup():void {
+        
+        $this->gumballMachineInstance = new GumballMachine();
+    }
+    
+    public function testIfWheelWorks() {
+        
+        $this->gumballMachineInstance->setGumballs(100);
+        
+        $this->gumballMachineInstance->turnWheel();
+        
+        // Change the expected value to make the assert fail
+        $this->assertEquals(9999, $this->gumballMachineInstance->getGumballs());
+    }
 }
